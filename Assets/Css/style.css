@@ -32,9 +32,9 @@ img {
 }
 
 /* jumbo */
-.jumbo_container {
+/* .jumbo_container {
   display: none;
-}
+} */
 .jumbo_container,
 .img_jumbo {
   height: 100%;
