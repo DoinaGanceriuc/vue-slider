@@ -75,10 +75,11 @@ img {
 }
 .hidden {
   filter: brightness(0.5);
+  border: none;
 }
 .visible_right_img {
   border: 5px solid #fff;
-  filter: drop-shadow(2px 4px 6px #000) brightness(2);
+  filter: drop-shadow(2px 4px 6px #000) brightness(1);
 }
 .text {
   position: absolute;

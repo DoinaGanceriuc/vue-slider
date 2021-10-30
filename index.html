@@ -17,24 +17,29 @@
                 <div class="row">
                     <div id="jumbo" class="col w_80">
                         <div class="jumbo_container">
-                            <img :src="places[counter].item" alt="">
+                            <img class="img_jumbo" :src="places[counter].item"
+                                alt="">
                             <div class="text">
                                 <h2 class="title">{{places[counter].title}}</h2>
                                 <p class="text_item">{{places[counter].text}}</p>
                             </div>
-
                         </div>
-
                     </div>
                     <!-- /#jumbo /.col -->
                     <div id="right_img" class="col w_20">
-                        <div id="chrevron_up">
+                        <div id="chrevron_up" @click="upImages">
 
                             <i id="up" class="fas fa-chevron-up fa-2x"></i>
                         </div>
-                        <div id="chrevron_down">
+                        <div id="chrevron_down" @click="downImages">
 
                             <i id="down" class="fas fa-chevron-down fa-2x"></i>
+                        </div>
+                        <div v-for="(place, index) in places" class="single_img"
+                            :class="[counter == index ? visible : '', hidden ]"
+                            :id="index">
+                            <img :src="place.item"
+                                alt="">
                         </div>
                     </div>
                     <!-- /#right_img /.col -->

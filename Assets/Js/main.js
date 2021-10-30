@@ -32,7 +32,28 @@ const app = new Vue ({
   },
 
 ],
-counter: 0
+  counter: 0,
+  visible: "visible_right_img",
+  hidden: "hidden"
 
-  }
+},
+  methods: {
+  upImages () {
+    /* console.log("cliccato su"); */
+    if(this.counter > 0) {
+        --this.counter
+      } else if (this.counter == 0) {
+        this.counter = this.places.length - 1;
+      }
+},
+  downImages () {
+    /* console.log("cliccato giù"); */
+    if(this.counter < this.places.length - 1) {
+      ++this.counter
+    } else if (this.counter == this.places.length - 1) {
+      this.counter = 0;
+    }
+}
+
+}
 })
